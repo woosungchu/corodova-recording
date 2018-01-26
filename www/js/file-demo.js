@@ -17,6 +17,8 @@ var objectURL = null;
 // Info/Debug
 var totalReceivedData = 0;
 
+var fft_data = null;
+
 // URL shim
 window.URL = window.URL || window.webkitURL;
 
@@ -29,6 +31,10 @@ function onAudioInputCapture(evt) {
             // Increase the debug counter for received data
             totalReceivedData += evt.data.length;
 
+fft_data = new fft.ComplexArray(512).map((value, i, n) => {
+  value.real = (i > n/3 && i < 2*n/3) ? 1 : 0;
+});
+console.log(fft_data)
             // Add the chunk to the buffer
             audioDataBuffer = audioDataBuffer.concat(evt.data);
         }

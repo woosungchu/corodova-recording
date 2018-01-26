@@ -1,4 +1,6 @@
-# Cordova Lora
+# @Deprecated Cordova Lora
+
+> Cordova cannot support ES6. That's reason why I don't touch this project anymore. Just leave it for the available recording demo.
 
 ## Command
 ```
@@ -8,6 +10,12 @@ $ cordova platform add android
 $ cordova platform ls
 $ cordova build
 $ cordova emulate android
+```
+
+
+## debug mode
+```
+ - chrome://inspect/#devices
 ```
 
 
@@ -25,3 +33,6 @@ $ cordova emulate android
 - [Sdk gralde/wrapper is empty](http://stackoverflow.com/questions/42613882/error-could-not-find-gradle-wrapper-within-android-sdk-might-need-to-update-yo)
 - [getToken is not working](https://github.com/fechanique/cordova-plugin-fcm/issues/239)
 - [cordova platform update android@latest](https://github.com/woosungchu/cordova-practice#)
+
+## References
+- [jsfft](https://github.com/dntj/jsfft)
